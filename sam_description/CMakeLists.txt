@@ -190,6 +190,11 @@ install(DIRECTORY robots/
   PATTERN ".svn" EXCLUDE
 )
 
+install(DIRECTORY mesh/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/mesh
+  PATTERN ".svn" EXCLUDE
+)
+
 #############
 ## Testing ##
 #############

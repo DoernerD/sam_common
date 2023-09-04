@@ -1,4 +1,4 @@
-<?xml version="2.0"?>
+<?xml version="1.0"?>
 <robot name="sam" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- Meshes. -->
@@ -8,7 +8,7 @@
   <xacro:property name="back_prop" value="file://$(find sam_description)/mesh/SAM_BACKPROP.dae"/>
 
 
-  <xacro:macro name="sam_auv" params="namespace debug">
+  <!-- <xacro:macro name="sam_auv" params="namespace debug"> -->
   <!-- Links. -->
   <link name="$(arg namespace)/base_link">
     <visual>
@@ -135,13 +135,13 @@
     <origin rpy="0.0 0.0 0.0" xyz="-0.402 0.0 0.078"/>
   </joint>
 
-  <!-- Waterlink Nosecone Camera Positions --> 
+  <!-- Waterlink Nosecone Camera Positions -->
   <joint name="$(arg namespace)/camera_front_joint" type="fixed">
     <parent link="$(arg namespace)/base_link"/>
     <child link="$(arg namespace)/camera_front_link"/>
     <origin rpy="0.0 1.5707 0.0" xyz="0.647 0.0 0.0"/>
   </joint>
-	  
+
   <joint name="$(arg namespace)/camera_down_joint" type="fixed">
     <parent link="$(arg namespace)/base_link"/>
     <child link="$(arg namespace)/camera_down_link"/>
@@ -185,6 +185,6 @@
     <limit lower="-1.6" upper="1.6" velocity="0.2" effort="1.0"/>
   </joint>
 
-  </xacro:macro>
+  <!-- </xacro:macro> -->
 
 </robot>
